@@ -1,0 +1,20 @@
+{
+  "name": "testes-caixinha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "cypress:web": "npx cypress open",
+    "cypress:headless": "npx cypress run --browser electron"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "testes-caixinha": "file:"
+  },
+  "devDependencies": {
+    "cypress": "^13.7.2"
+  }
+}
