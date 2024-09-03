@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cypress-wait-until": "^3.0.2",
     "testes-caixinha": "file:"
   },
   "devDependencies": {
