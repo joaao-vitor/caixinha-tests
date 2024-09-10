@@ -77,12 +77,11 @@ describe('Criar Grupo', () => {
             caminho: '',
         }
 
-        it(`Dado que o usuário está autenticado`, () => {
-            cy.window().then((win) => {
-                const authData = JSON.parse(win.localStorage.getItem('auth_data'));
-                return authData && authData.isAuthenticated === true;
-            })
-        })
+        it('Dado que o usuário está autenticado', () => {
+            cy.getLocalStorage('4invite@user').then(($authData => {
+                expect($authData.isAuthenticated === true)
+            }))
+        });
         it('Estou na página Grupos e Links', () => {
             cy.visit('/groups')
         })
@@ -119,12 +118,12 @@ describe('Criar Grupo', () => {
             caminho: 'meu-grupo',
         }
 
-        it(`Dado que o usuário está autenticado`, () => {
-            cy.window().then((win) => {
-                const authData = JSON.parse(win.localStorage.getItem('auth_data'));
-                return authData && authData.isAuthenticated === true;
-            })
-        })
+        it('Dado que o usuário está autenticado', () => {
+            cy.getLocalStorage('4invite@user').then(($authData => {
+                expect($authData.isAuthenticated === true)
+            }))
+        });
+        
         it('Estou na página Grupos e Links', () => {
             cy.visit('/groups')
         })
